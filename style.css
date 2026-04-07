@@ -1,32 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>TE AMO</title>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.0/css/all.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Amatic+SC'>
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <div class="bgoverlay">
-  <div class="container">
-    <span class="ico">
-      <span class="ico2"></span>
-      <span class="title">Pulsame</span>
-    </span>
-    <div class="endtext">
-      <span class="close" title="Close"><i class="fa fa-times"></i></span>
-           <h1>Te amo mi princesita</h1>
-      <h2>~</h2>
-      <h3>De tu bebito que te ama</h3>
-    </div>
-  </div>
-</div>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-
-  </body>
-  
-</html>
+body {
+  background: #f0f0f0;
+  font-family: "Amatic SC", cursive;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+}
+.bgoverlay {
+  background: #ff5e6c; /* Un color rosa/rojo romántico */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container {
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+  text-align: center;
+}
+.ico {
+  display: block;
+  width: 320px;
+  height: 320px;
+  position: relative;
+}
+.ico .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-size: 70px;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.ico:before {
+  display: block;
+  font-size: 20em;
+  color: #fff;
+  content: "\f004";
+  font-family: FontAwesome;
+}
+.endtext {
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.open .endtext {
+  top: 0;
+  opacity: 1;
+}
+.open .ico {
+  display: none;
+}
+.endtext h1 { font-size: 50px; }
+.endtext h2 { font-size: 30px; }
+.endtext h3 { font-size: 20px; }
